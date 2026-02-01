@@ -29,15 +29,15 @@ const ContactSection = () => {
   };
 
   const contactDetails = [
-    { icon: Mail, label: "Email", value: "riabdullahi@usiu.ac.ke", href: "mailto:riabdullahi@usiu.ac.ke" },
-    { icon: Phone, label: "Phone", value: "+254 713 780 461", href: "tel:+254713780461" },
+    { icon: Mail, label: "Email", value: "ridhwan.farhan.developer@gmail.com", href: "mailto:ridhwan.farhan.developer@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+254 716 664 576", href: "tel:+254716664576" },
     { icon: MapPin, label: "Location", value: "Nairobi, Kenya", href: null },
   ];
 
   const socialLinks = [
     { icon: Github, label: "GitHub", href: "https://github.com/ridhwan497" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-    { icon: Mail, label: "Email", href: "mailto:riabdullahi@usiu.ac.ke" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ridwan-abdullahi-8505b0266/" },
+    { icon: Mail, label: "Email", href: "mailto:ridhwan.farhan.developer@gmail.com" },
   ];
 
   return (

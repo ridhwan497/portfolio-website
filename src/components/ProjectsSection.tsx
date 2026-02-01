@@ -7,6 +7,7 @@ interface Project {
   description: string;
   tags: string[];
   videoPlaceholder: string;
+  videoUrl: string;
   github: string;
   color: string;
 }
@@ -18,6 +19,7 @@ const ProjectsSection = () => {
       description: "Peer-to-peer file sharing system using Flutter with full cross-platform support. WebRTC-based communication for direct, real-time file transfers.",
       tags: ["Flutter", "Dart", "WebRTC", "P2P"],
       videoPlaceholder: "📁",
+      videoUrl: "/videos/paffs.mp4",
       github: "https://github.com/ridhwan497",
       color: "bg-primary",
     },
@@ -25,7 +27,7 @@ const ProjectsSection = () => {
       title: "Online Examination System",
       description: "Java-based examination system with JavaFX client and Spring Boot backend. Features secure login, timed exams, and auto-submission.",
       tags: ["Java", "JavaFX", "Spring Boot", "MySQL"],
-      videoPlaceholder: "📝",
+      videoPlaceholder: "📁",
       github: "https://github.com/ridhwan497",
       color: "bg-secondary",
     },
@@ -33,7 +35,7 @@ const ProjectsSection = () => {
       title: "RTFM Helper",
       description: "Tool to streamline access to technical documentation, reducing lookup time. Efficient text processing and retrieval using Python and NLP.",
       tags: ["Python", "NLTK", "BeautifulSoup", "NLP"],
-      videoPlaceholder: "📚",
+      videoPlaceholder: "📁",
       github: "https://github.com/ridhwan497",
       color: "bg-accent",
     },
@@ -41,7 +43,8 @@ const ProjectsSection = () => {
       title: "Multi-Tenant Property Management",
       description: "Database-per-tenant backend with dynamic PostgreSQL creation. JWT authentication with tenant-aware routing and role-based access.",
       tags: ["PostgreSQL", "JWT", "Spring Boot", "JPA"],
-      videoPlaceholder: "🏢",
+      videoPlaceholder: "📁",
+      videoUrl: "/videos/domus.mp4",
       github: "https://github.com/ridhwan497",
       color: "bg-primary",
     },
@@ -159,26 +162,33 @@ const ProjectTVCard = ({ project, index }: ProjectTVCardProps) => {
         {/* TV Screen */}
         <div className={`${project.color} aspect-video flex items-center justify-center relative border-4 border-card/20 overflow-hidden`}>
           {isTvOn ? (
-            <>
-              {/* Video placeholder - replace with actual video later */}
-              <span className="text-7xl md:text-8xl">{project.videoPlaceholder}</span>
-              
-              {/* Play button overlay */}
-              <div className="absolute inset-0 bg-foreground/60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer">
-                <div className="bg-card border-brutal p-4 shadow-brutal-sm hover:scale-110 transition-transform">
-                  <Play size={32} className="text-foreground" fill="currentColor" />
+            // POWER ON STATE
+            project.videoUrl ? (
+              // Option A: We have a video -> Show video player
+              <video 
+                src={project.videoUrl}
+                className="w-full h-full object-cover"
+                controls
+                autoPlay
+                loop
+                muted // Start muted to avoid blasting sound
+                playsInline
+              />
+            ) : (
+              // Option B: No video yet -> Show the emoji placeholder
+              <>
+                <span className="text-7xl md:text-8xl animate-bounce">{project.videoPlaceholder}</span>
+                
+                {/* Scanlines effect (Optional, keeps the retro look) */}
+                <div className="absolute inset-0 pointer-events-none opacity-10">
+                  {[...Array(20)].map((_, i) => (
+                    <div key={i} className="h-[5%] bg-foreground/20" />
+                  ))}
                 </div>
-              </div>
-
-              {/* Scanlines effect */}
-              <div className="absolute inset-0 pointer-events-none opacity-10">
-                {[...Array(20)].map((_, i) => (
-                  <div key={i} className="h-[5%] bg-foreground/20" />
-                ))}
-              </div>
-            </>
+              </>
+            )
           ) : (
-            /* TV Off State - RF Logo */
+            /* TV Off State - RF Logo (Keep this part the same) */
             <div className="flex flex-col items-center justify-center text-card bg-foreground/90 absolute inset-0">
               <span className="font-display text-4xl md:text-5xl font-bold mb-2">
                 <span className="text-primary">&lt;</span>
@@ -188,7 +198,7 @@ const ProjectTVCard = ({ project, index }: ProjectTVCardProps) => {
               </span>
               <span className="text-xs uppercase tracking-wider text-card/70 flex items-center gap-2">
                 <Power size={12} />
-                Click power to turn on
+                Click power to watch
               </span>
             </div>
           )}

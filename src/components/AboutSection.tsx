@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "riabdullahi@usiu.ac.ke", href: "mailto:riabdullahi@usiu.ac.ke" },
-    { icon: Phone, label: "Phone", value: "+254 713 780 461", href: "tel:+254713780461" },
+    { icon: Mail, label: "Email", value: "ridhwan.farhan.developer@gmail.com", href: "mailto:ridhwan.farhan.developer@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+254 716 664 576", href: "tel:+254716664576" },
     { icon: Github, label: "GitHub", value: "github.com/ridhwan497", href: "https://github.com/ridhwan497" },
   ];
 

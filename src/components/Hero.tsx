@@ -49,14 +49,14 @@ const Hero = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/ridwan-abdullahi-8505b0266/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="brutal-box-hover p-3"
               >
                 <Linkedin size={24} />
               </a>
-              <a href="mailto:riabdullahi@usiu.ac.ke" className="brutal-box-hover p-3">
+              <a href="mailto:ridhwan.farhan.developer@gmail.com" className="brutal-box-hover p-3">
                 <Mail size={24} />
               </a>
             </div>

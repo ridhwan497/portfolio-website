@@ -31,20 +31,12 @@ const Footer = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ridwan-abdullahi-8505b0266/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-background text-foreground border-4 border-background hover:bg-secondary hover:text-secondary-foreground transition-colors"
             >
               <Linkedin size={24} />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-background text-foreground border-4 border-background hover:bg-accent hover:text-accent-foreground transition-colors"
-            >
-              <Twitter size={24} />
             </a>
           </div>
 

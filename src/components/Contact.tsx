@@ -47,13 +47,13 @@ const Contact = () => {
               </h3>
               
               <div className="space-y-4">
-                <a href="mailto:riabdullahi@usiu.ac.ke" className="brutal-box-hover p-4 flex items-center gap-4">
+                <a href="mailto:ridhwan.farhan.developer@gmail.com" className="brutal-box-hover p-4 flex items-center gap-4">
                   <div className="bg-primary text-primary-foreground p-3">
                     <Mail size={24} />
                   </div>
                   <div>
                     <div className="font-bold uppercase text-sm">Email</div>
-                    <div>riabdullahi@usiu.ac.ke</div>
+                    <div>ridhwan.farhan.developer@gmail.com</div>
                   </div>
                 </a>
 

@@ -4,7 +4,7 @@ import { ArrowDown, Github, Linkedin, FileText, Mail } from "lucide-react";
 
 const HeroSection = () => {
   const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/ridwan-abdullahi-8505b0266/", label: "LinkedIn" },
     { icon: Github, href: "https://github.com/ridhwan497", label: "GitHub" },
     { icon: FileText, href: "/cv", label: "CV", isInternal: true },
   ];
@@ -86,16 +86,14 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center md:text-left space-y-6"
           >
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-none">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-none">
               RIDWAN
-              <br />
-              <span className="text-stroke">FARHAN</span>
+              <span className="text-stroke">  FARHAN</span>
             </h1>
             
-            <div className="brutal-tag bg-secondary text-secondary-foreground text-lg px-6 py-2">
-              Software Engineer
-            </div>
-
+            <p className="font-mono text-xl md:text-3xl text-foreground/80 font-bold tracking-tighter mt-2">
+                Software Engineer
+            </p>
             {/* Say Hi Button */}
             <motion.a
               href="#contact"

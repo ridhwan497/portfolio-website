@@ -83,15 +83,15 @@ const CV = () => {
       {[1, 2, 3, 4, 5].map((dot, index) => (
         <div
           key={dot}
-          className={`w-2.5 h-2.5 rounded-full ${
-            dot <= level ? "bg-[#2d5a4a] animate-pulse" : "bg-[#2d5a4a]/30"
+          className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+            dot <= level 
+              ? "bg-[#2d5a4a] shadow-[0_0_5px_#d4654a]" 
+              : "bg-[#2d5a4a]/20"
           }`}
-          style={{ animationDelay: `${index * 0.15}s` }}
         />
       ))}
     </div>
   );
-
   return (
     <div className={`min-h-screen bg-[#9ec5b8] transition-all duration-300 ${isFullscreen ? 'p-0' : 'p-4 md:p-8'}`}>
       {/* Main CV Window */}
@@ -167,8 +167,8 @@ const CV = () => {
                   </div>
                   <div className="flex flex-wrap items-center gap-3">
                     <Mail size={16} className="text-[#2d2d2d] shrink-0" />
-                    <a href="mailto:riabdullahi@usiu.ac.ke" className="font-mono text-sm text-[#2d2d2d] hover:text-[#2d5a4a]">
-                      riabdullahi@usiu.ac.ke
+                    <a href="mailto:ridhwan.farhan.developer@gmail.com" className="font-mono text-sm text-[#2d2d2d] hover:text-[#2d5a4a]">
+                      ridhwan.farhan.developer@gmail.com
                     </a>
                     <Phone size={16} className="text-[#2d2d2d] shrink-0" />
                     <span className="font-mono text-sm text-[#2d2d2d]">(+254) 716 664 576</span>
