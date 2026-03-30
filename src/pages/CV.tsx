@@ -31,7 +31,7 @@ const CV = () => {
 
   const experience = [
     {
-      title: "Software Engineer Intern",
+      title: "Software Engineer",
       company: "Nova Care Center",
       period: "04/2025 - Present",
       points: [
