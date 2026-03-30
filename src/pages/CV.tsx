@@ -33,10 +33,10 @@ const CV = () => {
     {
       title: "Software Engineer",
       company: "Nova Care Center",
-      period: "04/2025 - Present",
+      period: "04/2025 - 03/2026",
       points: [
-        "Maintaining health management system for tracking developmental progress",
-        "Restored years of missing client data ensuring accuracy",
+        "Maintaining health management system for tracking developmental progress of children with autism",
+        "Restored years of missing client data",
         "Configured client goals and milestones",
       ],
     },
@@ -51,7 +51,10 @@ const CV = () => {
       ],
     },
   ];
-
+  const certifications = [  
+    { code: "AZ-900", name: "Microsoft Certified: Azure Fundamentals", date: "03/2026"},
+    { code: "AZ-500", name: "Microsoft Certified: Azure Security Engineer Associate", date: "ongoing"}
+  ]
   const references = [
     { name: "Dr. Edward Ombui", title: "Lecturer, USIU-Africa", email: "eombui@usiu.ac.ke" },
     { name: "Dr. Jennifer Gachukia", title: "Lecturer, USIU-Africa", email: "jwgachukia@usiu.ac.ke" },
@@ -292,6 +295,22 @@ const CV = () => {
                           <li key={i} className="font-mono text-sm text-[#2d2d2d]">{point}</li>
                         ))}
                       </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/*certifications section*/}
+              {/* Certifications Section */}
+              <div className="border-2 border-[#2d2d2d] bg-[#f5f0e1] p-4">
+                <span className="font-display font-bold tracking-[0.2em] text-[#2d2d2d] block mb-3">CERTIFICATIONS</span>
+                <div className="space-y-4">
+                  {certifications.map((cert) => (
+                    <div key={cert.code}>
+                      <h3 className="font-display font-bold text-[#2d2d2d]">{cert.name}</h3>
+                      <p className="font-mono text-sm text-[#2d2d2d]/70">
+                        {cert.code} | {cert.date}
+                      </p>
                     </div>
                   ))}
                 </div>
