@@ -33,8 +33,7 @@ const About = () => {
             <div className="brutal-box p-6 rotate-slight">
               <p className="text-lg leading-relaxed">
                 Hey there! I'm a <span className="bg-primary text-primary-foreground px-2 font-bold">Software Engineering</span> student 
-                at USIU-Africa with a passion for building digital products that make a difference. I love turning complex 
-                problems into simple, elegant solutions.
+                at USIU-Africa with a passion for I spend most of my time writing code to solve problems that I encounter.
               </p>
             </div>
             <div className="brutal-box p-6 -rotate-slight">
