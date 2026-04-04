@@ -31,7 +31,7 @@ const HeroSection = () => {
                 <img 
                   src = "profile.jpg"
                   alt = "Ridhwan Farhan"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className = "w-full h-full object-cover"
                 />
               </div>
             </div>
