@@ -101,7 +101,6 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="brutal-box p-8 space-y-6">
               <div>
                 <label htmlFor="name" className="block font-bold uppercase text-sm mb-2">
-                  U
                   Your Name
                 </label>
                 <input
